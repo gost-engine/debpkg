@@ -1,0 +1,17 @@
+Source: libengine-gost-openssl1.1
+Section: libs
+Priority: extra
+Maintainer: Victor Wagner <vitus@fafnir.l.postgrespro.ru>
+Build-Depends: debhelper (>= 9), cmake, libssl-dev
+Standards-Version: 3.9.5
+Homepage: https://github.com/gost-engine/engine
+Vcs-Git: https://github.com/gost-engine/engine.git
+
+Package: libengine-gost-openssl1.1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Loadable module for openssl implementing GOST algorithms
+ This package contains loadable module for openssl library, which
+ implements (in software) Russian national standard (GOST) cryptograpy
+ algorithms.
+

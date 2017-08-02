@@ -1,0 +1,5 @@
+libengine-gost-openssl1.1 (20170802-1) unstable; urgency=low
+
+  * Initial release 
+
+ -- Victor Wagner <vitus@wagner.pp.ru>  Wed, 02 Aug 2017 11:06:25 +0300

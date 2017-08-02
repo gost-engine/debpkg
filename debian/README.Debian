@@ -1,0 +1,11 @@
+libengine-gost-openssl1.1 for Debian
+------------------------------------
+
+This package contain loadable module for OpenSSL 1.1.x, which implements
+Russian GOST cryptograpy algorithms.
+
+This module can be enabled by adding -engine gost switch to most openssl
+library command or by adding appropriate sections to the openssl.cnf
+See readme gost for details
+
+ -- Victor Wagner <vitus@wagner.pp.ru>  Wed, 02 Aug 2017 11:06:25 +0300
