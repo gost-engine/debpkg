@@ -29,11 +29,18 @@ OPENSSL_ENGINE_DIR=$(shell openssl version -e |sed -e 's/^[^.]*"//' -e 's/".*$$/
 override_dh_install:
 	install -d -m 755 $(CURDIR)/debian/libengine-gost-openssl1.1/$(OPENSSL_ENGINE_DIR)
 	install -d -m 755 $(CURDIR)/debian/gostsum/usr/bin
+	install -d -m 755 $(CURDIR)/debian/gostsum/usr/share/man/man1
 	install -m 755 bin/gost.so $(CURDIR)/debian/libengine-gost-openssl1.1/$(OPENSSL_ENGINE_DIR)
 	install -m 755 bin/gostsum $(CURDIR)/debian/gostsum/usr/bin
 	install -m 755 bin/gost12sum $(CURDIR)/debian/gostsum/usr/bin
+	install -m 644 gostsum.1 $(CURDIR)/debian/gostsum/usr/share/man/man1
+	install -m 644 gost12sum.1 $(CURDIR)/debian/gostsum/usr/share/man/man1
 #verride_dh_clean:
 #	rm -rf bin debian/debhelper-build-stamp
 
 
 
+# Please also look if there are files or directories which have a
+# different copyright/license attached and list them here.
+# Please avoid to pick license terms that are more restrictive than the
+# packaged work, as it may make Debian's contributions unacceptable upstream.

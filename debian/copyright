@@ -1,20 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: libengine-gost-openssl1.1
-Source: <url://example.com>
+Upstream-Name: gost-engine
+Source: https://github.com/gost-engine/engine
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
-License: <special license>
- <Put the license of the package here indented by 1 space>
- <This follows the format of Description: lines in control file>
- .
- <Including paragraphs>
+Copyright: 2008-2017 Cryptocom Ltd
+License: OpenSSL License
 
-# If you want to use GPL v2 or later for the /debian/* files use 
-# the following clauses, or change it to suit. Delete these two lines
 Files: debian/*
-Copyright: 2017 Victor Wagner <vitus@fafnir.l.postgrespro.ru>
+Copyright: 2017 Victor Wagner <vitus@wagner.pp.ru>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -32,7 +25,3 @@ License: GPL-2+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-# Please also look if there are files or directories which have a
-# different copyright/license attached and list them here.
-# Please avoid to pick license terms that are more restrictive than the
-# packaged work, as it may make Debian's contributions unacceptable upstream.

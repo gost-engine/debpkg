@@ -43,7 +43,7 @@ $(PKGNAME)_$(VERSION)-1_$(ARCH).deb: $(PKGNAME)-$(VERSION)/debian/changelog
 # this rule
 #
 $(PKGNAME)-$(VERSION)/debian/changelog: $(PKGNAME)_$(VERSION).orig.tar.bz2 $(wildcard debian/*)	
-		rm -f $(PKGNAME)-$(VERSION)
+		rm -rf $(PKGNAME)-$(VERSION)
 		tar xf $(PKGNAME)_$(VERSION).orig.tar.bz2
 		cp -r debian $(PKGNAME)-$(VERSION)/debian
 		cd $(PKGNAME)-$(VERSION); dch -v $(VERSION)-1 "Build for $(ARCH)"
