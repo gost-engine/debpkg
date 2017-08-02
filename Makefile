@@ -33,8 +33,7 @@ engine/README.md:
 #
 
 $(PKGNAME)_$(VERSION)-1_$(ARCH).deb: $(PKGNAME)-$(VERSION)/debian/changelog
-	cd $(PKGNAME)-$(VERSION)
-	debuild
+	cd $(PKGNAME)-$(VERSION); debuild
 #
 # This rule creates unpacked Debian source by copiing debian
 # subdirectory from this git module into unpacked distribution-agnostic
