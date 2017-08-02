@@ -1,2 +1,4 @@
 engine
 libengine-gost-openssl1.1*
+gostsum_*
+gostsum-dbg*

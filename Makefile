@@ -43,7 +43,7 @@ $(PKGNAME)_$(VERSION)-1_$(ARCH).deb: $(PKGNAME)-$(VERSION)/debian/changelog
 # $(PKGNAME)-$(VERSION) if you want you changes survive invocation of
 # this rule
 #
-$(PKGNAME)_$(VERSION)/debian/changelog: $(PKGNAME)_$(VERSION).orig.tar.bz2 $(wildcard debian/*)	
+$(PKGNAME)-$(VERSION)/debian/changelog: $(PKGNAME)_$(VERSION).orig.tar.bz2 $(wildcard debian/*)	
 		rm -f $(PKGNAME)-$(VERSION)
 		tar xf $(PKGNAME)_$(VERSION).orig.tar.bz2
 		cp -r debian $(PKGNAME)-$(VERSION)/debian

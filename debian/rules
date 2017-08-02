@@ -16,7 +16,7 @@ include /usr/share/dpkg/default.mk
 # package maintainers to append LDFLAGS
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
-
+OPENSSL_ENGINE_DIR=$(shell openssl version -e |sed -e 's/^[^.]*"//' -e 's/".*$$//')
 # main packaging script based on dh7 syntax
 %:
 	dh $@ 
@@ -26,7 +26,14 @@ include /usr/share/dpkg/default.mk
 #override_dh_auto_configure:
 #	dh_auto_configure -- \
 #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
-override_dh_install
+override_dh_install:
+	install -d -m 755 $(CURDIR)/debian/libengine-gost-openssl1.1/$(OPENSSL_ENGINE_DIR)
+	install -d -m 755 $(CURDIR)/debian/gostsum/usr/bin
+	install -m 755 bin/gost.so $(CURDIR)/debian/libengine-gost-openssl1.1/$(OPENSSL_ENGINE_DIR)
+	install -m 755 bin/gostsum $(CURDIR)/debian/gostsum/usr/bin
+	install -m 755 bin/gost12sum $(CURDIR)/debian/gostsum/usr/bin
+#verride_dh_clean:
+#	rm -rf bin debian/debhelper-build-stamp
 
 
 

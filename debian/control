@@ -2,7 +2,7 @@ Source: libengine-gost-openssl1.1
 Section: libs
 Priority: extra
 Maintainer: Victor Wagner <vitus@fafnir.l.postgrespro.ru>
-Build-Depends: debhelper (>= 9), cmake, libssl-dev
+Build-Depends: debhelper (>= 9), cmake, libssl-dev, openssl
 Standards-Version: 3.9.5
 Homepage: https://github.com/gost-engine/engine
 Vcs-Git: https://github.com/gost-engine/engine.git
@@ -14,4 +14,13 @@ Description: Loadable module for openssl implementing GOST algorithms
  This package contains loadable module for openssl library, which
  implements (in software) Russian national standard (GOST) cryptograpy
  algorithms.
+
+Package: gostsum
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Utility to compute GOST hashes
+ This package contain utilities to compute GOST hashsums
+ gostsum - computes GOST R 34.11-94 hash
+ gost12sum - computes GOST R 34.11-2012 hash
+
 
